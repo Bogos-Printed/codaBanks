@@ -15,7 +15,7 @@ console.log(startupParts.join("\n"));
 
 // TODO
 
-const cli = new CLI([
+const mainMenu = new CLI([
   {
     title: "Créer un compte",
     value: "create",
@@ -26,10 +26,29 @@ const cli = new CLI([
   {
     title: "Connexion a un compte",
     value: "log",
-    action: () => {
-      console.log("nah");
+    action: async () => {
+      await name;
     }
   }
+
 ]);
 
-cli.menu();
+async function name() {
+  const cli = new CLI([
+    {
+      title: "Make a deposit",
+      value: "deposit",
+      action: () => {
+        console.log("Création d'un compte");
+      },
+    },
+    {
+      title: "Check Account Balance",
+      value: "check",
+      action: () => {
+        console.log("poor");
+      }
+    }])
+}
+
+mainMenu.menu();
