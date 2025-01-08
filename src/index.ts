@@ -23,6 +23,13 @@ const cli = new CLI([
       console.log("Création d'un compte");
     },
   },
+  {
+    title: "Connexion a un compte",
+    value: "log",
+    action: () => {
+      console.log("nah");
+    }
+  }
 ]);
 
 cli.menu();
