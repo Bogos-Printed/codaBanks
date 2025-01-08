@@ -1,4 +1,4 @@
-CodaBank project
+<h1>CodaBank project</h1>
 
 outil sans interface de gestion de compte bancaire
 
@@ -9,4 +9,4 @@ Dépendance :
 Prompts
 
 Pour les installer:
-=> npm install
+=> ```npm install```
