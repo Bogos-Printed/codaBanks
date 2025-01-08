@@ -15,6 +15,9 @@ console.log(startupParts.join("\n"));
 
 // TODO
 
+const exempleUser: string [] = ["1", "John", "Doe"];
+const balance: number = 1000;
+
 const mainMenu = new CLI([
   {
     title: "Créer un compte",
@@ -27,28 +30,31 @@ const mainMenu = new CLI([
     title: "Connexion a un compte",
     value: "log",
     action: async () => {
-      await name;
+      await accountMenu();
     }
   }
 
 ]);
 
-async function name() {
+async function accountMenu() {
   const cli = new CLI([
     {
-      title: "Make a deposit",
+      title: "Faire un dépot",
       value: "deposit",
       action: () => {
-        console.log("Création d'un compte");
+        console.log("Combien souhaiter vous déposer ?");
+        // askvalue
       },
     },
     {
-      title: "Check Account Balance",
+      title: "Regarder sa solde",
       value: "check",
       action: () => {
-        console.log("poor");
+        console.log(`Votre solde est à ${balance}`);
       }
     }])
+
+    return cli.menu; 
 }
 
 mainMenu.menu();
